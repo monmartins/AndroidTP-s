@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textSize="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:scaleType="center"
+        android:background="#FFFFBB33"
+        android:textAllCaps="false"
+        android:text="Nota"/>
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextContent"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Titulo da Nota" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextTitle"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Conteúdo da Nota"
+        android:inputType="textMultiLine" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha a data"
+        android:id="@+id/data"
+        android:textSize="25dp"
+        android:layout_below="@id/editTextContent"
+        android:layout_alignLeft="@+id/editTextTitle"
+        android:layout_centerHorizontal="true"
+        android:onClick="showDatePickerDialog" />
+
+</LinearLayout>

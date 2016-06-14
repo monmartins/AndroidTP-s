@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.ufc.dc.dspm.mynotes.MyNotes">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextContent"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="note title" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextTitle"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="note content"
+        android:inputType="textMultiLine" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha a data"
+        android:id="@+id/data"
+        android:textSize="25dp"
+        android:layout_below="@id/editTextContent"
+        android:layout_alignLeft="@+id/editTextTitle"
+        android:layout_centerHorizontal="true"
+        android:onClick="showDatePickerDialog" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/data"
+        android:id="@+id/layout">
+        <Button
+        android:id="@+id/buttonPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editTextTitle"
+        android:onClick="pesquise"
+        android:text="Pesquisar" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/editTextTitle"
+            android:layout_below="@+id/data"
+            android:onClick="addNote"
+            android:text="Adicionar" />
+    </LinearLayout>
+    <TextView
+    android:id="@+id/textViewNotes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/layout"
+    android:layout_below="@+id/layout"
+    android:text="Notes" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewNotes"
+        android:id="@android:id/list"/>
+</RelativeLayout>
