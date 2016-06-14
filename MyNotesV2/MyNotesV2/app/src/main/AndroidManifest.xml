@@ -15,10 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:name="br.ufc.dc.dspm.mynotes.NotesProvider"
-        android:authorities="br.ufc.dc.dspm.mynotes.provider.Note"></provider>
 
+        <provider
+            android:name=".NotesProvider"
+            android:authorities="br.ufc.dc.dspm.mynotes.provider.Note" />
+
+        <activity android:name=".Pesquisa"></activity>
     </application>
 
 </manifest>

@@ -55,7 +55,6 @@ public class MyNotes extends ListActivity implements LoaderManager.LoaderCallbac
     }
 
     public void listNotes(View view) throws ParseException {
-        StringBuffer buffer = new StringBuffer();
         String URL = NotesProvider.URL;
         Uri notesURI = Uri.parse(URL);
         Cursor cursor = getContentResolver().query(notesURI, null, null, null, NotesProvider.ID);
@@ -73,6 +72,11 @@ public class MyNotes extends ListActivity implements LoaderManager.LoaderCallbac
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
+    }
+    public void pesquise(View view){
+        Intent intent = new Intent(this,Pesquisa.class);
+        startActivity(intent);
+
     }
     //Clicar e Editar Notas
     @Override

@@ -50,6 +50,15 @@
         android:text="Add" />
 
     <Button
+        android:id="@+id/buttonPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="pesquise"
+        android:layout_alignBaseline="@+id/buttonAdd"
+        android:text="Pesquisar" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LIST"
