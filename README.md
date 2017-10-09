@@ -1,2 +1,2 @@
 # AndroidTP-s
-Repositório de Tutoriais
+Repositório de Tutoriais da disciplina de programação móvel.
